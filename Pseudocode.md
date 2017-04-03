@@ -1,5 +1,5 @@
 
-#PSEUDOCODE - PROJECT #1 Hangman
+#PSEUDOCODE - PROJECT #1 Adventure Time Hangman
 
 <h4>Variables</h4>
 
@@ -8,8 +8,12 @@ Variables:
 2. var wrongLetters = [0,0,0,0,0,0,0]  
 3. var chosenLetters  
 
-SIMPLE 2 PLAYER VERSION
+SIMPLE 1 PLAYER VERSION 
 --------------
+
+1. Create an array of words for computer to choose from
+	- Chosen word is transformed into _ 
+2. 
 
 1. Receive word from Player 1, store it into variable answer.
 2. Display word length to Player 2  
