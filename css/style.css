@@ -1,45 +1,49 @@
 
 
 * {
-font-family: 'Oswald', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
+
 
 body {
-   display: grid;
-   grid-template-rows: 1fr min-content 1fr;
-   grid-template-columns: 1fr 1fr;
-   border: 10px pink solid;
-}
-
-.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  grid-template-columns: 1fr 1fr;
+  border: 2px black solid;
+  margin: 20px 10px;
   font-size: 20px;
 }
 
-p {
-  font-size: 15px;
+/*-- Top Header --*/
+
+.title-area {
+  grid-row: 1;
+  grid-column: 1;
+  padding: 3px;
+  margin: 0px auto;
 }
 
-header {
-   grid-row: 1;
-   grid-column: 1;
-   border: 1px solid black;
+.message-area {
+  grid-row: 1;
+  grid-column: 2;
+  margin: 0px auto;
 }
 
-/*-- Message Area --*/
+.text-header {
+  color: black;
+  font-size: 23px;
+}
 
-#message-area {
-   grid-row: 1;
-   grid-column: 2;
-   border: 1px solid black;
+#lives {
+  color: green;
 }
 
 /*--Hangman--*/
 
-
 #main-hangman {
-   grid-row: 2;
-   grid-column: 1;
-   border: 1px solid black;
+  grid-row: 2;
+  grid-column: 1;
+  border-top: 1px solid black;
 }
 
 .hangmanimages {
@@ -48,10 +52,29 @@ header {
   margin: 0px 10px;
 }
 
+/*--- Player Area ---*/
+
 #player-bar {
-   grid-row: 2;
-   grid-column: 2;
-   border: 1px solid black;
+  grid-row: 2;
+  grid-column: 2;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+}
+
+#playButton {
+  background-color: #4CAF50;
+  border: white 1px solid;
+  color: white;
+  padding: 3px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 20px 10px;
+}
+
+#alphabet {
+  text-align: center;
 }
 
 .underscore {
@@ -59,39 +82,10 @@ header {
   width: 30px;
 }
 
+
+
 footer {
-   grid-row: 3;
-   grid-column: 1 / span 2;
-   border: 1px solid black;
-}
-
-/*
-body {
-  display: grid;
-  grid-template-rows: 150px min-content min-content 1fr;
-  grid-template-columns: 1fr 20em;
-}
-
-#titleHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid black;
-}
-
-h1 {
-  font-size: 40px;
-/*  float: left;
-  display:inline;
-}
-
-#footer {
-  width: 100%;
-  background-color: lightgrey;
+  grid-row: 3;
+  grid-column: 1 / span 2;
   border-top: 1px solid black;
-  height: 30px;
-  margin-bottom: auto;
-  padding-bottom: 30px;
-  position: absolute;
-}*/
-
+}

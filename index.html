@@ -11,30 +11,61 @@
 
   <body>
   <!-- First Row -->
-    <header>
-      <p>
-      <span class= "header">ADVENTURE TIME HANGMAN</span>:
-      <br>
-      You have <span id="lives">7</span> chances before Lemongrab dies!
-      </p>
-    </header>
+    <div class = "title-area">
+      <span class = "text-header">ADVENTURE TIME HANGMAN</span>:
+    </div>
 
-    <div id="message-area">
-      <h1>Message here</h1>
+    <div class = "message-area">
+      <span class="text-header"><span id="lives">6</span> chances before Lemongrab dies!</span>
     </div>
 
   <!-- Second Row -->
     <div id="main-hangman">
       <p>
-        <img src="images/hangman1.png" class="hangmanimages"></img>
+        <img src="images/0.png" class="hangmanimages"></img>
 
       </p>
     </div>
-    <div id="player-bar">
-      <p>Where the player will guess:</p>
 
-      <div class="underscore">
+    <div id="player-bar">
+
+      <button type="button" id="playButton">PLAY ME</button>
+
+      <div id="alphabet">
+        <button onclick="setLetter('A');">A</button>
+        <button onclick="setLetter('B');">B</button>
+        <button onclick="setLetter('C');">C</button>
+        <button onclick="setLetter('D');">D</button>
+        <button onclick="setLetter('E');">E</button>
+        <button onclick="setLetter('F');">F</button>
+        <button onclick="setLetter('G');">G</button>
+        <button onclick="setLetter('H');">H</button>
+        <button onclick="setLetter('I');">I</button>
+        <button onclick="setLetter('J');">J</button>
+        <button onclick="setLetter('K');">K</button>
+        <button onclick="setLetter('L');">L</button>
+        <button onclick="setLetter('M');">M</button>
+        <br>
+        <button onclick="setLetter('N');">N</button>
+        <button onclick="setLetter('O');">O</button>
+        <button onclick="setLetter('P');">P</button>
+        <button onclick="setLetter('Q');">Q</button>
+        <button onclick="setLetter('R');">R</button>
+        <button onclick="setLetter('S');">S</button>
+        <button onclick="setLetter('T');">T</button>
+        <button onclick="setLetter('U');">U</button>
+        <button onclick="setLetter('V');">V</button>
+        <button onclick="setLetter('W');">W</button>
+        <button onclick="setLetter('X');">X</button>
+        <button onclick="setLetter('Y');">Y</button>
+        <button onclick="setLetter('Z');">Z</button>
+        <br>
+        <br>
       </div>
+
+
+
+
 
     </div>
 

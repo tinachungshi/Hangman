@@ -18,39 +18,44 @@
 
 // Array with words
 var adWords = ['finn the human', 'jake the dog', 'princess bubblegum', 'ice king', 'lumpy space princess', 'earl of lemongrab', 'beemo', 'lady rainicorn'];
-var underscores = '';
-var spaces = ' ';
 
 var answerWord;
-var chosenLetters = [];
-var wrongLetters = [0, 0, 0, 0, 0, 0, 0];
-// var answerWord = console.log(chooseWord(adventureWords));
+var guessedWord;
+var chosenLetters;
+var wrongCount;
 
-// To pick a word randomly from array of adventureWords
-function chooseWord(adWords) {
-  return adWords[Math.floor(Math.random() * adWords.length)];
-};
+/*--- event listeners ---*/
 
-// Change the word into _
-function blankWord(answerWord) {
+$(`#playButton`).on('click', function() {
+  startGame();
+});
+
+
+
+
+
+/*--- functions ---*/
+
+function startGame() {
+  chosenLetters = [];
+  wrongCount = 0;
+  // grab random phrase
+  answerWord = adWords[Math.floor(Math.random() * adWords.length)];
+  guessedWord = initGuessedWord();
+  console.log(answerWord)
+  console.log(guessedWord)
+}
+
+function initGuessedWord() {
   var result = '';
   for (var i = 0; i < answerWord.length; i++) {
-    result += ' _';
+    result += (answerWord[i] === ' ') ? ' ' : '_';
   }
   return result;
 }
 
-// // Trying to turn word into _ and spaces into spaces
-// function blankWord(answerWord) {
-//   var result = '';
-//   for (var i = 0; i < answerWord.length; i++) {
-//     if (result = '') {
-//       result += '_';
-//     } else if (result = ' ') {
-//       result += ' ';
-//     }
-//   return result;
-//   }
+// function setLetter(letter) {
+//   document.getElementById('alphabet').innerHTML = document.getElementById('alphabet').innerHTML + letter;
 // }
 
 
