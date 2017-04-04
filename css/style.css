@@ -31,10 +31,20 @@ body {
   left: 15%;
 }
 
-#image1, #image2, #image3, #image4, #image5, #image6, #iceking, #finn,
-#jake, #princess {
+#image1, #image2, #image3, #image4, #image5, #image6, #finn,
+#jake, #princess, #iceking, #lumpy, #lemongrab, #beemo, #rainicorn {
   display: none;
 }
+
+#jake, #princess, #lumpy, #beemo {
+  width: 200px;
+  height: auto;
+}
+
+#finn, #lemongrab, #rainicorn, #iceking {
+  height: 250px;
+  width: auto;
+  }
 
 /*--- Player Area ---*/
 
@@ -92,5 +102,11 @@ button:disabled {
   letter-spacing: 5px;
   position: relative;
   top: 45px;
+  left: 15px;
+}
+
+#loser-images {
+  position: relative;
+  top: 50px;
   left: 15px;
 }

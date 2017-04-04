@@ -120,13 +120,24 @@ function loseImageToggle() {
         $(`#word-box`).text(answerWord);
         $(`#image6`).delay(1500).fadeOut();
         $(`#iceking`).delay(2000).fadeIn();
-      } else if (answerWord === "ice king" && badGuesses.length === 6) {
+      } else if (answerWord === "lumpy space princess" && badGuesses.length === 6) {
         $(`#word-box`).text(answerWord);
         $(`#image6`).delay(1500).fadeOut();
-        $(`#iceking`).delay(2000).fadeIn();
+        $(`#lumpy`).delay(2000).fadeIn();
+      } else if (answerWord === "earl of lemongrab" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#lemongrab`).delay(2000).fadeIn();
+      } else if (answerWord === "beemo" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#beemo`).delay(2000).fadeIn();
+      } else if (answerWord === "lady rainicorn" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#rainicorn`).delay(2000).fadeIn();
+      }
 }
-}
-
 
 function checkForWin() {
   if (secretWord === answerWord) {
