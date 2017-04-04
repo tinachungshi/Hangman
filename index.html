@@ -5,63 +5,62 @@
     <title>Hangman</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rye" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
   <!-- First Row -->
-    <div class = "title-area">
-      <span class = "text-header">ADVENTURE TIME HANGMAN</span>:
+    <div class="title-area">
+      <span class="text-header">ADVENTURE TIME HANGMAN</span>:
     </div>
 
-    <div class = "message-area">
+    <div class="message-area">
       <span class="text-header"><span id="lives">6</span> chances before Lemongrab dies!</span>
     </div>
 
   <!-- Second Row -->
     <div id="main-hangman">
-      <p>
-        <img src="images/0.png" class="hangmanimages"></img>
-
-      </p>
+<!--         <img src="images/0.png" class="hangmanimages"></img> -->
     </div>
 
     <div id="player-bar">
 
-      <button type="button" id="playButton">PLAY ME</button>
+      <button type="button" id="play-button">TOUCH ME</button>
 
       <div id="alphabet">
-        <button onclick="setLetter('A');">A</button>
-        <button onclick="setLetter('B');">B</button>
-        <button onclick="setLetter('C');">C</button>
-        <button onclick="setLetter('D');">D</button>
-        <button onclick="setLetter('E');">E</button>
-        <button onclick="setLetter('F');">F</button>
-        <button onclick="setLetter('G');">G</button>
-        <button onclick="setLetter('H');">H</button>
-        <button onclick="setLetter('I');">I</button>
-        <button onclick="setLetter('J');">J</button>
-        <button onclick="setLetter('K');">K</button>
-        <button onclick="setLetter('L');">L</button>
-        <button onclick="setLetter('M');">M</button>
+        <button id="A" class="alpha-buttons">A</button>
+        <button id="B" class="alpha-buttons">B</button>
+        <button id="C" class="alpha-buttons">C</button>
+        <button id="D" class="alpha-buttons">D</button>
+        <button id="E" class="alpha-buttons">E</button>
+        <button id="F" class="alpha-buttons">F</button>
+        <button id="G" class="alpha-buttons">G</button>
+        <button id="H" class="alpha-buttons">H</button>
+        <button id="I" class="alpha-buttons">I</button>
         <br>
-        <button onclick="setLetter('N');">N</button>
-        <button onclick="setLetter('O');">O</button>
-        <button onclick="setLetter('P');">P</button>
-        <button onclick="setLetter('Q');">Q</button>
-        <button onclick="setLetter('R');">R</button>
-        <button onclick="setLetter('S');">S</button>
-        <button onclick="setLetter('T');">T</button>
-        <button onclick="setLetter('U');">U</button>
-        <button onclick="setLetter('V');">V</button>
-        <button onclick="setLetter('W');">W</button>
-        <button onclick="setLetter('X');">X</button>
-        <button onclick="setLetter('Y');">Y</button>
-        <button onclick="setLetter('Z');">Z</button>
+        <button id="J" class="alpha-buttons">J</button>
+        <button id="K" class="alpha-buttons">K</button>
+        <button id="L" class="alpha-buttons">L</button>
+        <button id="M" class="alpha-buttons">M</button>
+        <button id="N" class="alpha-buttons">N</button>
+        <button id="O" class="alpha-buttons">O</button>
+        <button id="P" class="alpha-buttons">P</button>
+        <button id="Q" class="alpha-buttons">Q</button>
+        <button id="R" class="alpha-buttons">R</button>
         <br>
-        <br>
+        <button id="S" class="alpha-buttons">S</button>
+        <button id="T" class="alpha-buttons">T</button>
+        <button id="U" class="alpha-buttons">U</button>
+        <button id="V" class="alpha-buttons">V</button>
+        <button id="W" class="alpha-buttons">W</button>
+        <button id="X" class="alpha-buttons">X</button>
+        <button id="Y" class="alpha-buttons">Y</button>
+        <button id="Z" class="alpha-buttons">Z</button>
       </div>
+
+      <div id="word-box"></div>
 
 
 
