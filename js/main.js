@@ -13,7 +13,6 @@
 
 // Array with words
 var adventureWords = ['finn the human', 'jake the dog', 'princess bubblegum', 'ice king', 'lumpy space princess', 'earl of lemongrab', 'beemo', 'lady rainicorn'];
-
 var answerWord;
 var secretWord;
 var chosenLetters;
@@ -29,7 +28,6 @@ $(`#play-button`).on('click', function() {
 // gets alphabet that's clicked
 $(`#alphabet`).on('click', 'button', handleLetter);
 
-// bring up images when wrong
 
 
 /*--- functions ---*/
@@ -73,17 +71,75 @@ function handleLetter(evt) {
     // maybe fn is called replaceUnderscoresWithLetter(letter)
   } else {
     badGuesses.push(letter);
-
   }
-  // console.log('badGuesses',badGuesses);
-  // if won
-    // set winning message or var
-  // otherwise if loss
-    // set loser message or var
+  loseImageToggle();
+  checkForWin();
   // render();
 }
 
-//
+function loseImageToggle() {
+  if (badGuesses.length === 1) {
+    $(`#lives`).text("5 CHANCES LEFT");
+    $(`#image0`).hide();
+    $(`#image1`).show();
+  } else if (badGuesses.length === 2) {
+    $(`#lives`).text("4 CHANCES LEFT");
+    $(`#image1`).hide();
+    $(`#image2`).show();
+  } else if (badGuesses.length === 3) {
+    $(`#lives`).text("3 CHANCES LEFT");
+    $(`#image2`).hide();
+    $(`#image3`).show();
+  } else if (badGuesses.length === 4) {
+    $(`#lives`).text("2 CHANCES LEFT");
+    $(`#image3`).hide();
+    $(`#image4`).show();
+  } else if (badGuesses.length === 5) {
+    $(`#lives`).text("1 CHANCES LEFT");
+    $(`#image4`).hide();
+    $(`#image5`).show();
+  } else if (badGuesses.length === 6) {
+    $(`#alert-messages`).hide();
+    $(`#lives`).text("YOU KILLED LEMONGRAB");
+    $(`#alphabet`).hide();
+    $(`#image5`).hide();
+    $(`#image6`).show();
+    } if (answerWord === "finn the human" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#finn`).delay(2000).fadeIn();
+      } else if (answerWord === "jake the dog" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#jake`).delay(2000).fadeIn();
+      } else if (answerWord === "princess bubblegum" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#princess`).delay(2000).fadeIn();
+      } else if (answerWord === "ice king" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#iceking`).delay(2000).fadeIn();
+      } else if (answerWord === "ice king" && badGuesses.length === 6) {
+        $(`#word-box`).text(answerWord);
+        $(`#image6`).delay(1500).fadeOut();
+        $(`#iceking`).delay(2000).fadeIn();
+}
+}
+
+
+function checkForWin() {
+  if (secretWord === answerWord) {
+    $(`#alert-messages`).text("LEMONGRAB LIVES ANOTHER DAY!");
+    $(`#alphabet`).hide();
+    $(`#lives`).hide();
+
+  } else {
+    $(`#alert-messages`).text("LEMONGRAB IS DYING");
+  }
+}
+
+
 function replaceCharAt(str, idx, char) {
   return str.substr(0, idx) + char + str.substr(idx +1);
 }
@@ -99,10 +155,10 @@ function replaceUnderscoresWithLetter(letter) {
   render();
 }
 
-// the hangman sequence
-var hangmanSequence = [0, 1, 2, 3, 4, 5, 6];
+
+
+
 
 startGame();
 
-//
 
