@@ -28,8 +28,6 @@ $(`#play-button`).on('click', function() {
 // gets alphabet that's clicked
 $(`#alphabet`).on('click', 'button', handleLetter);
 
-
-
 /*--- functions ---*/
 
 function startGame() {
@@ -100,7 +98,7 @@ function loseImageToggle() {
     $(`#image5`).show();
   } else if (badGuesses.length === 6) {
     $(`#alert-messages`).hide();
-    $(`#lives`).text("YOU KILLED LEMONGRAB");
+    $(`#lives`).text("WHO KILLED LEMONGRAB?");
     $(`#alphabet`).hide();
     $(`#image5`).hide();
     $(`#image6`).show();
@@ -146,10 +144,9 @@ function checkForWin() {
     $(`#lives`).hide();
 
   } else {
-    $(`#alert-messages`).text("LEMONGRAB IS DYING");
+    $(`#alert-messages`).text("SAVE LEMONGRAB");
   }
 }
-
 
 function replaceCharAt(str, idx, char) {
   return str.substr(0, idx) + char + str.substr(idx +1);

@@ -19,7 +19,19 @@ body {
   background-size: 100% 100%;
 }
 
-/*--Hangman--*/
+/*--- Header ---*/
+header {
+  position: relative;
+}
+
+#logo {
+  height: 100px;
+  position: absolute;
+  right: 2%;
+  margin: 6px;
+}
+
+/*--- Hangman ---*/
 #main-hangman {
   position: relative;
   top: 6%;
@@ -31,8 +43,7 @@ body {
   left: 15%;
 }
 
-#image1, #image2, #image3, #image4, #image5, #image6, #finn,
-#jake, #princess, #iceking, #lumpy, #lemongrab, #beemo, #rainicorn {
+#image1, #image2, #image3, #image4, #image5, #image6 {
   display: none;
 }
 
@@ -49,9 +60,9 @@ body {
 /*--- Player Area ---*/
 
 #player-bar {
-position: absolute;
-top:10%;
-right: 30%;
+  position: absolute;
+  top: 10%;
+  right: 30%;
 }
 
 button {
@@ -108,5 +119,21 @@ button:disabled {
 #loser-images {
   position: relative;
   top: 50px;
-  left: 15px;
+/*  left: 15px;*/
 }
+
+#finn, #jake, #princess, #iceking, #lumpy, #lemongrab, #beemo, #rainicorn {
+  display: none;
+}
+
+#jake, #princess, #lumpy, #beemo {
+  width: 200px;
+  height: auto;
+}
+
+#finn, #lemongrab, #rainicorn, #iceking {
+  height: 250px;
+  width: auto;
+  }
+
+
