@@ -1,13 +1,4 @@
 
-/*---
-1. Computer picks random word from adventureWords array
-2. The picked word is saved as the answerWord
-3. Change the answerWord to _ (secretWord) for it to show up
-4. If wrong, hangman is drawn (6 tries with images)
-5. Store and update secretWord if correct
-6. If secretWord is equal to answerWord, alert winner
----*/
-
 /*--- Variables ---*/
 
 var adventureWords = ['finn the human', 'jake the dog', 'princess bubblegum', 'ice king', 'lumpy space princess', 'beemo', 'lady rainicorn'];
@@ -24,7 +15,6 @@ $('#alphabet').on('click', 'button', handleLetter);
 
 $('#image-change').click(function() {
   $('.main-body').toggleClass('image2');
-  console.log('why is this not working');
 });
 
 /*--- Functions ---*/
@@ -100,7 +90,7 @@ function replaceCharAt(str, idx, char) {
 
 function replaceUnderscoresWithLetter(letter) {
   var copiedWord = answerWord;
-  while (copiedWord.indexOf(letter) > -1) { // if letter is not there
+  while (copiedWord.indexOf(letter) > -1) {
     var idx = copiedWord.indexOf(letter);
     secretWord = replaceCharAt(secretWord, idx, letter);
     copiedWord = replaceCharAt(copiedWord, idx, ' ');
