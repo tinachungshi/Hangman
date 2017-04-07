@@ -22,7 +22,12 @@ $('#play-button').on('click', startGame);
 
 $('#alphabet').on('click', 'button', handleLetter);
 
-/*--- functions ---*/
+$('#image-change').click(function() {
+  $('.main-body').toggleClass('image2');
+  console.log('why is this not working');
+});
+
+/*--- Functions ---*/
 
 function startGame() {
   chosenLetters = [];
@@ -33,6 +38,7 @@ function startGame() {
   $('#hangman').show();
   $('#alphabet').show();
   $('#lemongrab').hide();
+  $('#lives').show();
   cartoonIds.forEach(function(id) {
     $(id).hide();
   });
